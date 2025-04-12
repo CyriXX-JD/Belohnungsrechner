@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belohnungsrechner | Reward Calculator</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="lang-switcher" onclick="toggleLanguage()">
+    Deutsch / English
+  </div>
+
+  <div class="container">
+    <h1 id="title">Belohnung berechnen</h1>
+
+    <label for="refReward" id="rewardLabel">Referenz-Belohnung:</label>
+    <input type="number" id="refReward" value="4224" min="0">
+
+    <label for="refMultiplier" id="multiplierLabel">Multiplikator:</label>
+    <input type="number" step="0.01" id="refMultiplier" value="1.32" min="0">
+
+    <label for="newMultiplier" id="newMultiplierLabel">Neuer Multiplikator:</label>
+    <input type="number" step="0.01" id="newMultiplier" min="0">
+
+    <button onclick="calculateReward()">Berechnen</button>
+    <button onclick="saveAsPDF()">Als PDF speichern</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
